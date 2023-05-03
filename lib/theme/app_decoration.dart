@@ -1,22 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:hire_help_ff/core/app_export.dart';
+import 'package:hire_help_v2/core/app_export.dart';
 
 class AppDecoration {
-  static BoxDecoration get gradientAmber300Yellow80001 => BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment(
-            0.5,
-            0,
-          ),
-          end: Alignment(
-            0.5,
-            1,
-          ),
-          colors: [
-            ColorConstant.amber300,
-            ColorConstant.yellow80001,
-          ],
-        ),
+  static BoxDecoration get fillIndigo900 => BoxDecoration(
+        color: ColorConstant.indigo900,
+      );
+  static BoxDecoration get fillPink900 => BoxDecoration(
+        color: ColorConstant.pink900,
       );
   static BoxDecoration get button => BoxDecoration(
         gradient: LinearGradient(
@@ -34,6 +24,9 @@ class AppDecoration {
           ],
         ),
       );
+  static BoxDecoration get fillAmberA700c6 => BoxDecoration(
+        color: ColorConstant.amberA700C6,
+      );
   static BoxDecoration get outlineIndigo900 => BoxDecoration(
         color: ColorConstant.whiteA700,
         border: Border.all(
@@ -41,22 +34,6 @@ class AppDecoration {
           width: getHorizontalSize(
             1,
           ),
-        ),
-      );
-  static BoxDecoration get gradientAmber600Yellow800 => BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment(
-            0.5,
-            0,
-          ),
-          end: Alignment(
-            0.5,
-            1,
-          ),
-          colors: [
-            ColorConstant.amber600,
-            ColorConstant.yellow800,
-          ],
         ),
       );
   static BoxDecoration get outline => BoxDecoration(
@@ -77,46 +54,19 @@ class AppDecoration {
           ),
         ],
       );
-  static BoxDecoration get txtButton => BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment(
-            0.5,
-            0,
-          ),
-          end: Alignment(
-            0.5,
+  static BoxDecoration get outlineIndigo9001 => BoxDecoration(
+        border: Border.all(
+          color: ColorConstant.indigo900,
+          width: getHorizontalSize(
             1,
           ),
-          colors: [
-            ColorConstant.indigo90001,
-            ColorConstant.teal300,
-          ],
-        ),
-      );
-  static BoxDecoration get gradientRed900Gray900a8 => BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment(
-            0.5,
-            0,
-          ),
-          end: Alignment(
-            0.5,
-            1,
-          ),
-          colors: [
-            ColorConstant.red900,
-            ColorConstant.gray900A8,
-          ],
         ),
       );
   static BoxDecoration get fillWhiteA700 => BoxDecoration(
         color: ColorConstant.whiteA700,
       );
-  static BoxDecoration get txtFillGray400 => BoxDecoration(
-        color: ColorConstant.gray400,
-      );
-  static BoxDecoration get fillLightblue900 => BoxDecoration(
-        color: ColorConstant.lightBlue900,
+  static BoxDecoration get fillAmber300 => BoxDecoration(
+        color: ColorConstant.amber300,
       );
 }
 
@@ -146,21 +96,9 @@ class BorderRadiusStyle {
     ),
   );
 
-  static BorderRadius roundedBorder15 = BorderRadius.circular(
-    getHorizontalSize(
-      15,
-    ),
-  );
-
   static BorderRadius roundedBorder10 = BorderRadius.circular(
     getHorizontalSize(
       10,
-    ),
-  );
-
-  static BorderRadius txtRoundedBorder7 = BorderRadius.circular(
-    getHorizontalSize(
-      7,
     ),
   );
 
@@ -179,9 +117,9 @@ class BorderRadiusStyle {
 }
 
 // Comment/Uncomment the below code based on your Flutter SDK version.
-    
+
 // For Flutter SDK Version 3.7.2 or greater.
-    
+
 double get strokeAlignInside => BorderSide.strokeAlignInside;
 
 double get strokeAlignCenter => BorderSide.strokeAlignCenter;
@@ -195,4 +133,3 @@ double get strokeAlignOutside => BorderSide.strokeAlignOutside;
 // StrokeAlign get strokeAlignCenter => StrokeAlign.center;
 //
 // StrokeAlign get strokeAlignOutside => StrokeAlign.outside;
-    

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:hire_help_ff/core/app_export.dart';
+import 'package:hire_help_v2/core/app_export.dart';
 
 class AppStyle {
-  static TextStyle txtPoppinsMedium32Yellow80001 = TextStyle(
-    color: ColorConstant.yellow80001,
+  static TextStyle txtPoppinsMedium24Indigo900 = TextStyle(
+    color: ColorConstant.indigo900,
     fontSize: getFontSize(
-      32,
+      24,
     ),
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w500,
@@ -47,15 +47,6 @@ class AppStyle {
     fontWeight: FontWeight.w500,
   );
 
-  static TextStyle txtLatoMedium20Indigo900 = TextStyle(
-    color: ColorConstant.indigo900,
-    fontSize: getFontSize(
-      20,
-    ),
-    fontFamily: 'Lato',
-    fontWeight: FontWeight.w500,
-  );
-
   static TextStyle txtPoppinsMedium14 = TextStyle(
     color: ColorConstant.indigo900,
     fontSize: getFontSize(
@@ -63,15 +54,6 @@ class AppStyle {
     ),
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w500,
-  );
-
-  static TextStyle txtLatoBlack25 = TextStyle(
-    color: ColorConstant.whiteA700,
-    fontSize: getFontSize(
-      25,
-    ),
-    fontFamily: 'Lato',
-    fontWeight: FontWeight.w900,
   );
 
   static TextStyle txtPoppinsSemiBold15 = TextStyle(
@@ -83,43 +65,7 @@ class AppStyle {
     fontWeight: FontWeight.w600,
   );
 
-  static TextStyle txtPoppinsSemiBold16 = TextStyle(
-    color: ColorConstant.indigo90003,
-    fontSize: getFontSize(
-      16,
-    ),
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w600,
-  );
-
   static TextStyle txtPoppinsMedium32 = TextStyle(
-    color: ColorConstant.indigo900,
-    fontSize: getFontSize(
-      32,
-    ),
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w500,
-  );
-
-  static TextStyle txtPoppinsMedium22Black900 = TextStyle(
-    color: ColorConstant.black900,
-    fontSize: getFontSize(
-      22,
-    ),
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w500,
-  );
-
-  static TextStyle txtLatoMedium24 = TextStyle(
-    color: ColorConstant.indigo90003,
-    fontSize: getFontSize(
-      24,
-    ),
-    fontFamily: 'Lato',
-    fontWeight: FontWeight.w500,
-  );
-
-  static TextStyle txtPoppinsMedium32WhiteA700 = TextStyle(
     color: ColorConstant.whiteA700,
     fontSize: getFontSize(
       32,
@@ -144,15 +90,6 @@ class AppStyle {
     ),
     fontFamily: 'Roboto',
     fontWeight: FontWeight.w400,
-  );
-
-  static TextStyle txtLatoMedium20 = TextStyle(
-    color: ColorConstant.indigo90003,
-    fontSize: getFontSize(
-      20,
-    ),
-    fontFamily: 'Lato',
-    fontWeight: FontWeight.w500,
   );
 
   static TextStyle txtPoppinsMedium16 = TextStyle(
@@ -200,24 +137,6 @@ class AppStyle {
     fontWeight: FontWeight.w600,
   );
 
-  static TextStyle txtPoppinsRegular15 = TextStyle(
-    color: ColorConstant.gray800,
-    fontSize: getFontSize(
-      15,
-    ),
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w400,
-  );
-
-  static TextStyle txtLatoBlack20 = TextStyle(
-    color: ColorConstant.whiteA700,
-    fontSize: getFontSize(
-      20,
-    ),
-    fontFamily: 'Lato',
-    fontWeight: FontWeight.w900,
-  );
-
   static TextStyle txtPoppinsRegular16 = TextStyle(
     color: ColorConstant.gray800,
     fontSize: getFontSize(
@@ -245,15 +164,6 @@ class AppStyle {
     fontWeight: FontWeight.w600,
   );
 
-  static TextStyle txtLatoBlack25Indigo900 = TextStyle(
-    color: ColorConstant.indigo900,
-    fontSize: getFontSize(
-      25,
-    ),
-    fontFamily: 'Lato',
-    fontWeight: FontWeight.w900,
-  );
-
   static TextStyle txtPoppinsMedium24Black900 = TextStyle(
     color: ColorConstant.black900,
     fontSize: getFontSize(
@@ -263,8 +173,26 @@ class AppStyle {
     fontWeight: FontWeight.w500,
   );
 
-  static TextStyle txtPoppinsMedium22 = TextStyle(
+  static TextStyle txtLexendMedium18WhiteA700 = TextStyle(
+    color: ColorConstant.whiteA700,
+    fontSize: getFontSize(
+      18,
+    ),
+    fontFamily: 'Lexend',
+    fontWeight: FontWeight.w500,
+  );
+
+  static TextStyle txtPoppinsMedium32Indigo900 = TextStyle(
     color: ColorConstant.indigo900,
+    fontSize: getFontSize(
+      32,
+    ),
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w500,
+  );
+
+  static TextStyle txtPoppinsMedium22 = TextStyle(
+    color: ColorConstant.black900,
     fontSize: getFontSize(
       22,
     ),
@@ -281,15 +209,6 @@ class AppStyle {
     fontWeight: FontWeight.w900,
   );
 
-  static TextStyle txtPoppinsMedium20 = TextStyle(
-    color: ColorConstant.indigo900,
-    fontSize: getFontSize(
-      20,
-    ),
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w500,
-  );
-
   static TextStyle txtPoppinsSemiBold20 = TextStyle(
     color: ColorConstant.whiteA700,
     fontSize: getFontSize(
@@ -299,8 +218,17 @@ class AppStyle {
     fontWeight: FontWeight.w600,
   );
 
+  static TextStyle txtPoppinsMedium20 = TextStyle(
+    color: ColorConstant.indigo900,
+    fontSize: getFontSize(
+      20,
+    ),
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w500,
+  );
+
   static TextStyle txtRobotoRegular16 = TextStyle(
-    color: ColorConstant.blueGray400,
+    color: ColorConstant.bluegray400,
     fontSize: getFontSize(
       16,
     ),
@@ -344,24 +272,6 @@ class AppStyle {
     fontWeight: FontWeight.w900,
   );
 
-  static TextStyle txtPoppinsMedium24WhiteA700 = TextStyle(
-    color: ColorConstant.whiteA700,
-    fontSize: getFontSize(
-      24,
-    ),
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w500,
-  );
-
-  static TextStyle txtLatoMedium17 = TextStyle(
-    color: ColorConstant.indigo90003,
-    fontSize: getFontSize(
-      17,
-    ),
-    fontFamily: 'Lato',
-    fontWeight: FontWeight.w500,
-  );
-
   static TextStyle txtPoppinsRegular20 = TextStyle(
     color: ColorConstant.gray800,
     fontSize: getFontSize(
@@ -369,14 +279,5 @@ class AppStyle {
     ),
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w400,
-  );
-
-  static TextStyle txtPoppinsSemiBold16WhiteA700 = TextStyle(
-    color: ColorConstant.whiteA700,
-    fontSize: getFontSize(
-      16,
-    ),
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w600,
   );
 }

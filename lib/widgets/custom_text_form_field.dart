@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hire_help_ff/core/app_export.dart';
+import 'package:hire_help_v2/core/app_export.dart';
 
 class CustomTextFormField extends StatelessWidget {
   CustomTextFormField(
@@ -114,32 +114,29 @@ class CustomTextFormField extends StatelessWidget {
         return TextStyle(
           color: ColorConstant.blueGray800,
           fontSize: getFontSize(
-            14,
+            16,
           ),
-          fontFamily: 'Poppins',
-          fontWeight: FontWeight.w500,
+          fontFamily: 'Lato',
+          fontWeight: FontWeight.w900,
+          height: getVerticalSize(
+            1.25,
+          ),
         );
     }
   }
 
   _setOutlineBorderRadius() {
     switch (shape) {
-      case TextFormFieldShape.RoundedBorder4:
+      case TextFormFieldShape.RoundedBorder7:
         return BorderRadius.circular(
           getHorizontalSize(
-            4.00,
-          ),
-        );
-      case TextFormFieldShape.RoundedBorder10:
-        return BorderRadius.circular(
-          getHorizontalSize(
-            10.00,
+            7.00,
           ),
         );
       default:
         return BorderRadius.circular(
           getHorizontalSize(
-            7.00,
+            10.00,
           ),
         );
     }
@@ -147,14 +144,6 @@ class CustomTextFormField extends StatelessWidget {
 
   _setBorderStyle() {
     switch (variant) {
-      case TextFormFieldVariant.OutlineIndigo900_1:
-        return OutlineInputBorder(
-          borderRadius: _setOutlineBorderRadius(),
-          borderSide: BorderSide(
-            color: ColorConstant.indigo900,
-            width: 1,
-          ),
-        );
       case TextFormFieldVariant.None:
         return InputBorder.none;
       default:
@@ -177,8 +166,6 @@ class CustomTextFormField extends StatelessWidget {
 
   _setFilled() {
     switch (variant) {
-      case TextFormFieldVariant.OutlineIndigo900_1:
-        return false;
       case TextFormFieldVariant.None:
         return false;
       default:
@@ -190,25 +177,28 @@ class CustomTextFormField extends StatelessWidget {
     switch (padding) {
       default:
         return getPadding(
-          all: 9,
+          top: 10,
+          right: 10,
+          bottom: 10,
         );
     }
   }
 }
 
 enum TextFormFieldShape {
-  RoundedBorder7,
-  RoundedBorder4,
   RoundedBorder10,
+  RoundedBorder7,
 }
+
 enum TextFormFieldPadding {
-  PaddingAll9,
+  PaddingT10,
 }
+
 enum TextFormFieldVariant {
   None,
   OutlineIndigo900,
-  OutlineIndigo900_1,
 }
+
 enum TextFormFieldFontStyle {
-  PoppinsMedium14,
+  LatoBlack16,
 }

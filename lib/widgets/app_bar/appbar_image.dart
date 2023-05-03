@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hire_help_ff/core/app_export.dart';
+import 'package:hire_help_v2/core/app_export.dart';
 
 // ignore: must_be_immutable
 class AppbarImage extends StatelessWidget {

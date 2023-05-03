@@ -1,5 +1,5 @@
 
-# hire_help_ff
+# hire_help_v2
 ### Table of contents
 - [System requirements](#system-requirements)
 - [Figma design guidelines for better UI accuracy](#figma-design-guideline-for-better-accuracy)
@@ -56,4 +56,4 @@ Resolve the errors and warnings that are shown in the application.
 
 ### Support
 
-If you have any problems or questions, go to our Discord channel, where we will help you as quickly as possible: https://discord.com/invite/rFMnCG5MZ7
+If you have any problems or questions, go to our Discord channel, where we will help you as quickly as possible: https://discord.com/invite/tCnjHth7wU

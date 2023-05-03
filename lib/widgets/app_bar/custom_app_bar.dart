@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:hire_help_ff/core/app_export.dart';
+import 'package:hire_help_v2/core/app_export.dart';
 
 // ignore: must_be_immutable
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   CustomAppBar(
       {required this.height,
-      this.styleType,
       this.leadingWidth,
       this.leading,
       this.title,
@@ -13,8 +12,6 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
       this.actions});
 
   double height;
-
-  Style? styleType;
 
   double? leadingWidth;
 
@@ -33,7 +30,6 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
       toolbarHeight: height,
       automaticallyImplyLeading: false,
       backgroundColor: Colors.transparent,
-      flexibleSpace: _getStyle(),
       leadingWidth: leadingWidth ?? 0,
       leading: leading,
       title: title,
@@ -48,24 +44,4 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
         size.width,
         height,
       );
-  _getStyle() {
-    switch (styleType) {
-      case Style.bgFillWhiteA700:
-        return Container(
-          height: getVerticalSize(
-            102,
-          ),
-          width: double.maxFinite,
-          decoration: BoxDecoration(
-            color: ColorConstant.whiteA700,
-          ),
-        );
-      default:
-        return null;
-    }
-  }
-}
-
-enum Style {
-  bgFillWhiteA700,
 }

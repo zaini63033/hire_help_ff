@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hire_help_ff/core/app_export.dart';
+import 'package:hire_help_v2/core/app_export.dart';
 
 class CustomIconButton extends StatelessWidget {
   CustomIconButton(
@@ -67,98 +67,46 @@ class CustomIconButton extends StatelessWidget {
   _buildDecoration() {
     return BoxDecoration(
       color: _setColor(),
-      border: _setBorder(),
       borderRadius: _setBorderRadius(),
-      boxShadow: _setBoxShadow(),
     );
   }
 
   _setPadding() {
     switch (padding) {
-      case IconButtonPadding.PaddingAll8:
-        return getPadding(
-          all: 8,
-        );
       default:
         return getPadding(
-          all: 18,
+          all: 8,
         );
     }
   }
 
   _setColor() {
     switch (variant) {
-      case IconButtonVariant.FillGray30001:
+      default:
         return ColorConstant.gray30001;
-      default:
-        return ColorConstant.blueGray100;
-    }
-  }
-
-  _setBorder() {
-    switch (variant) {
-      case IconButtonVariant.FillGray30001:
-        return null;
-      default:
-        return Border.all(
-          color: ColorConstant.blueGray100,
-          width: getHorizontalSize(
-            3.00,
-          ),
-        );
     }
   }
 
   _setBorderRadius() {
     switch (shape) {
-      case IconButtonShape.RoundedBorder16:
+      default:
         return BorderRadius.circular(
           getHorizontalSize(
             16.00,
           ),
         );
-      default:
-        return BorderRadius.circular(
-          getHorizontalSize(
-            30.00,
-          ),
-        );
-    }
-  }
-
-  _setBoxShadow() {
-    switch (variant) {
-      case IconButtonVariant.FillGray30001:
-        return null;
-      default:
-        return [
-          BoxShadow(
-            color: ColorConstant.deepPurpleA20019,
-            spreadRadius: getHorizontalSize(
-              2.00,
-            ),
-            blurRadius: getHorizontalSize(
-              2.00,
-            ),
-            offset: Offset(
-              4,
-              4,
-            ),
-          ),
-        ];
     }
   }
 }
 
 enum IconButtonShape {
-  CircleBorder30,
   RoundedBorder16,
 }
+
 enum IconButtonPadding {
-  PaddingAll18,
   PaddingAll8,
 }
+
 enum IconButtonVariant {
-  OutlineBluegray100,
   FillGray30001,
 }

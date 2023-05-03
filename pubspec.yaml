@@ -1,8 +1,8 @@
-name: hire_help_ff
+name: hire_help_v2
 description: A new Flutter project.
 version: 1.0.0+1
 environment: 
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=2.17.0 <3.0.0'
 dependencies: 
   flutter: 
     sdk: flutter
@@ -10,6 +10,10 @@ dependencies:
   flutter_svg: ^1.1.6
   outline_gradient_button: ^2.0.0+1
   intl: ^0.17.0
+  firebase_core: ^2.9.0
+  firebase_auth: ^4.4.0
+  fluttertoast: ^8.2.1
+  cloud_firestore: ^4.5.0
 dev_dependencies: 
   flutter_test: 
     sdk: flutter
@@ -39,7 +43,3 @@ flutter:
       fonts: 
         - asset: assets/fonts/LexendMedium.ttf
           weight: 500
-    - family: Inter
-      fonts: 
-        - asset: assets/fonts/InterRegular.ttf
-          weight: 400

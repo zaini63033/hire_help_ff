@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:hire_help_ff/core/app_export.dart';
+import 'package:hire_help_v2/core/app_export.dart';
 
 class CustomButton extends StatelessWidget {
   CustomButton(
-      {this.padding,
-      this.shape,
+      {this.shape,
+      this.padding,
       this.variant,
       this.fontStyle,
       this.alignment,
@@ -14,11 +14,13 @@ class CustomButton extends StatelessWidget {
       this.height,
       this.text,
       this.prefixWidget,
-      this.suffixWidget});
-
-  ButtonPadding? padding;
+      this.suffixWidget,
+      required String buttonText,
+      required Null Function() onPressed});
 
   ButtonShape? shape;
+
+  ButtonPadding? padding;
 
   ButtonVariant? variant;
 
@@ -101,7 +103,6 @@ class CustomButton extends StatelessWidget {
     return BoxDecoration(
       borderRadius: _setBorderRadius(),
       gradient: _setGradient(),
-      boxShadow: _setBoxShadow(),
     );
   }
 
@@ -118,7 +119,6 @@ class CustomButton extends StatelessWidget {
         ),
         padding: _setPadding(),
         backgroundColor: _setColor(),
-        shadowColor: _setTextButtonShadowColor(),
         shape: RoundedRectangleBorder(
           borderRadius: _setBorderRadius(),
         ),
@@ -128,64 +128,21 @@ class CustomButton extends StatelessWidget {
 
   _setPadding() {
     switch (padding) {
-      case ButtonPadding.PaddingT1:
+      case ButtonPadding.PaddingAll10:
         return getPadding(
-          top: 1,
-          bottom: 1,
-        );
-      case ButtonPadding.PaddingAll12:
-        return getPadding(
-          all: 12,
-        );
-      case ButtonPadding.PaddingT15:
-        return getPadding(
-          left: 15,
-          top: 15,
-          bottom: 15,
-        );
-      case ButtonPadding.PaddingAll15:
-        return getPadding(
-          all: 15,
-        );
-      case ButtonPadding.PaddingT9:
-        return getPadding(
-          left: 9,
-          top: 9,
-          bottom: 9,
-        );
-      case ButtonPadding.PaddingAll5:
-        return getPadding(
-          all: 5,
+          all: 10,
         );
       default:
         return getPadding(
-          all: 9,
+          all: 13,
         );
     }
   }
 
   _setColor() {
     switch (variant) {
-      case ButtonVariant.Outline:
-        return ColorConstant.gray100;
-      case ButtonVariant.FillGray400:
-        return ColorConstant.gray400;
-      case ButtonVariant.GradientAmber600Yellow800:
-      case ButtonVariant.Button:
-        return null;
-      default:
-        return null;
-    }
-  }
-
-  _setTextButtonShadowColor() {
-    switch (variant) {
-      case ButtonVariant.Outline:
-        return ColorConstant.blueGray90033;
-      case ButtonVariant.GradientAmber600Yellow800:
-      case ButtonVariant.Button:
-      case ButtonVariant.FillGray400:
-        return null;
+      case ButtonVariant.FillLime700:
+        return ColorConstant.lime700;
       default:
         return null;
     }
@@ -226,15 +183,9 @@ class CustomButton extends StatelessWidget {
           ),
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w600,
-        );
-      case ButtonFontStyle.PoppinsSemiBold1229:
-        return TextStyle(
-          color: ColorConstant.whiteA700,
-          fontSize: getFontSize(
-            12.29,
+          height: getVerticalSize(
+            1.50,
           ),
-          fontFamily: 'Poppins',
-          fontWeight: FontWeight.w600,
         );
       case ButtonFontStyle.LatoBlack16:
         return TextStyle(
@@ -244,33 +195,9 @@ class CustomButton extends StatelessWidget {
           ),
           fontFamily: 'Lato',
           fontWeight: FontWeight.w900,
-        );
-      case ButtonFontStyle.LexendMedium18:
-        return TextStyle(
-          color: ColorConstant.whiteA700,
-          fontSize: getFontSize(
-            18,
+          height: getVerticalSize(
+            1.25,
           ),
-          fontFamily: 'Lexend',
-          fontWeight: FontWeight.w500,
-        );
-      case ButtonFontStyle.LatoMedium16:
-        return TextStyle(
-          color: ColorConstant.whiteA700,
-          fontSize: getFontSize(
-            16,
-          ),
-          fontFamily: 'Lato',
-          fontWeight: FontWeight.w500,
-        );
-      case ButtonFontStyle.LatoMedium15:
-        return TextStyle(
-          color: ColorConstant.indigo90003,
-          fontSize: getFontSize(
-            15,
-          ),
-          fontFamily: 'Lato',
-          fontWeight: FontWeight.w500,
         );
       case ButtonFontStyle.PoppinsSemiBold24:
         return TextStyle(
@@ -280,43 +207,28 @@ class CustomButton extends StatelessWidget {
           ),
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w600,
-        );
-      case ButtonFontStyle.PoppinsSemiBold16:
-        return TextStyle(
-          color: ColorConstant.whiteA700,
-          fontSize: getFontSize(
-            16,
+          height: getVerticalSize(
+            1.50,
           ),
-          fontFamily: 'Poppins',
-          fontWeight: FontWeight.w600,
-        );
-      case ButtonFontStyle.PoppinsSemiBold16Indigo90003:
-        return TextStyle(
-          color: ColorConstant.indigo90003,
-          fontSize: getFontSize(
-            16,
-          ),
-          fontFamily: 'Poppins',
-          fontWeight: FontWeight.w600,
         );
       default:
         return TextStyle(
-          color: ColorConstant.indigo900,
+          color: ColorConstant.whiteA700,
           fontSize: getFontSize(
-            15,
+            12.29,
           ),
-          fontFamily: 'Inter',
-          fontWeight: FontWeight.w400,
+          fontFamily: 'Poppins',
+          fontWeight: FontWeight.w600,
+          height: getVerticalSize(
+            1.55,
+          ),
         );
     }
   }
 
   checkGradient() {
     switch (variant) {
-      case ButtonVariant.GradientAmber600Yellow800:
-        return true;
-      case ButtonVariant.Outline:
-      case ButtonVariant.FillGray400:
+      case ButtonVariant.FillLime700:
         return false;
       default:
         return true;
@@ -325,23 +237,7 @@ class CustomButton extends StatelessWidget {
 
   _setGradient() {
     switch (variant) {
-      case ButtonVariant.GradientAmber600Yellow800:
-        return LinearGradient(
-          begin: Alignment(
-            0.5,
-            0,
-          ),
-          end: Alignment(
-            0.5,
-            1,
-          ),
-          colors: [
-            ColorConstant.amber600,
-            ColorConstant.yellow800,
-          ],
-        );
-      case ButtonVariant.Outline:
-      case ButtonVariant.FillGray400:
+      case ButtonVariant.FillLime700:
         return null;
       default:
         return LinearGradient(
@@ -360,65 +256,28 @@ class CustomButton extends StatelessWidget {
         );
     }
   }
+}
 
-  _setBoxShadow() {
-    switch (variant) {
-      case ButtonVariant.Outline:
-        return [
-          BoxShadow(
-            color: ColorConstant.blueGray90033,
-            spreadRadius: getHorizontalSize(
-              2.00,
-            ),
-            blurRadius: getHorizontalSize(
-              2.00,
-            ),
-            offset: Offset(
-              6,
-              10,
-            ),
-          ),
-        ];
-      case ButtonVariant.GradientAmber600Yellow800:
-      case ButtonVariant.Button:
-      case ButtonVariant.FillGray400:
-        return null;
-      default:
-        return null;
-    }
-  }
+enum ButtonShape {
+  Square,
+  RoundedBorder7,
+  RoundedBorder27,
+  RoundedBorder10,
 }
 
 enum ButtonPadding {
-  PaddingT1,
-  PaddingAll12,
-  PaddingT15,
-  PaddingAll9,
-  PaddingAll15,
-  PaddingT9,
-  PaddingAll5,
+  PaddingAll13,
+  PaddingAll10,
 }
-enum ButtonShape {
-  Square,
-  RoundedBorder27,
-  RoundedBorder7,
-  RoundedBorder10,
-}
+
 enum ButtonVariant {
-  GradientAmber600Yellow800,
   Button,
-  Outline,
-  FillGray400,
+  FillLime700,
 }
+
 enum ButtonFontStyle {
-  InterRegular15,
-  PoppinsSemiBold20,
   PoppinsSemiBold1229,
+  PoppinsSemiBold20,
   LatoBlack16,
-  LexendMedium18,
-  LatoMedium16,
-  LatoMedium15,
   PoppinsSemiBold24,
-  PoppinsSemiBold16,
-  PoppinsSemiBold16Indigo90003,
 }

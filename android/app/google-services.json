@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "587722849672",
+    "project_id": "hire-help-f5fc2",
+    "storage_bucket": "hire-help-f5fc2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587722849672:android:d80d8d7aabd05c6037ce3d",
+        "android_client_info": {
+          "package_name": "com.hirehelpv.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "587722849672-ps36gvd0e085hg1ved07qcdk5i9e2dfn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2SYI77P-aoJVSXfaFXoQJdXWPw1M0uew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "587722849672-ps36gvd0e085hg1ved07qcdk5i9e2dfn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

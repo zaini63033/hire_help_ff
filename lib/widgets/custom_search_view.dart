@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hire_help_ff/core/app_export.dart';
+import 'package:hire_help_v2/core/app_export.dart';
 
 class CustomSearchView extends StatelessWidget {
   CustomSearchView(
@@ -81,6 +81,7 @@ class CustomSearchView extends StatelessWidget {
       prefixIconConstraints: prefixConstraints,
       suffixIcon: suffix,
       suffixIconConstraints: suffixConstraints,
+      fillColor: _setFillColor(),
       filled: _setFilled(),
       isDense: true,
       contentPadding: _setPadding(),
@@ -97,6 +98,9 @@ class CustomSearchView extends StatelessWidget {
           ),
           fontFamily: 'Lato',
           fontWeight: FontWeight.w500,
+          height: getVerticalSize(
+            1.21,
+          ),
         );
     }
   }
@@ -124,14 +128,21 @@ class CustomSearchView extends StatelessWidget {
     }
   }
 
+  _setFillColor() {
+    switch (variant) {
+      default:
+        return ColorConstant.amber300;
+    }
+  }
+
   _setFilled() {
     switch (variant) {
-      case SearchViewVariant.GradientAmber600Yellow800:
-        return false;
+      case SearchViewVariant.FillAmber300:
+        return true;
       case SearchViewVariant.None:
         return false;
       default:
-        return false;
+        return true;
     }
   }
 
@@ -150,13 +161,16 @@ class CustomSearchView extends StatelessWidget {
 enum SearchViewShape {
   RoundedBorder15,
 }
+
 enum SearchViewPadding {
   PaddingT14,
 }
+
 enum SearchViewVariant {
   None,
-  GradientAmber600Yellow800,
+  FillAmber300,
 }
+
 enum SearchViewFontStyle {
   LatoMedium14,
 }
